@@ -3,8 +3,9 @@ const CurrBtn = document.querySelector('#CurrLocation');
 
 const CityName = document.querySelector("#CityName");
 // console.dir(CityName);
+const Search = document.querySelector("#Search");
 
-const disBox = document.querySelector('.display')
+const disBox = document.querySelector('.display');
 // console.dir(disBox);
 
 const nav = document.querySelector('.display-nav');
@@ -56,6 +57,20 @@ function err(error) {
   // console.log(error.message);
 }
 
+Search.addEventListener('click', (evt) => {
+  console.log(evt);
+  console.log(CityName.value);
+  if (CityName.value != null) {
+    evt.preventDefault();
+    city = CityName.value;
+    CityName.value = "";
+    API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
+
+    APIfore = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&units=metric`;
+
+    getWeather();
+  }
+})
 CityName.addEventListener('keydown', (evt) => {
   if (evt.code === "Enter" && CityName.value != null) {
     evt.preventDefault();

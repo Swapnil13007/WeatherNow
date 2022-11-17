@@ -142,6 +142,19 @@ input[id="CityName"]:focus {
   border-width: 0.1rem;
 }
 
+#Search {
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  margin: 0.3rem;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+#Search:hover {
+  cursor: pointer;
+}
+
 button#CurrLocation {
   color: black;
   margin-top: 4%;
