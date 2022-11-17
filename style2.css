@@ -1,0 +1,69 @@
+@media (max-width: 960px) {
+  .section {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .display {
+    flex-direction: row;
+    margin: 1rem 0rem;
+  }
+
+
+  .display-msg {
+    height: fit-content;
+  }
+
+  .display-input {
+    height: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .info {
+    width: 96%;
+    height: 96%;
+    flex-direction: column;
+    margin: 1rem 0rem;
+  }
+
+  .infoItems {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .maininfoItem {
+    height: 32%;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #icon,
+  #temp,
+  #weath,
+  #loc,
+  #oth {
+    padding: 0.rem;
+    height: 100%;
+    width: max-content;
+  }
+
+  #temp,
+  #weath,
+  #loc {
+    border-right: solid 0.08rem lightgray;
+  }
+
+  .otherinfoItem {
+    height: 64%;
+    width: 96%;
+    flex-direction: column;
+  }
+}

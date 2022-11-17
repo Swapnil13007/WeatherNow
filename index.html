@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow</title>
+  <script src="https://kit.fontawesome.com/b26051f063.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style2.css"> -->
+</head>
+
+<body>
+  <header>
+    <div class="head">
+      <h1>WeatherNow</h1>
+    </div>
+  </header>
+  <section class="section">
+
+    <div class="display">
+
+      <div class="display-nav" style="display: none">
+        <span id="backimg"><img src="img/back.svg" alt="backBtn"></span>
+
+        <p id="nav">Search Another Location</p>
+      </div>
+
+      <div class="display-msg" style="display: none">
+        <p id="status">Fetching Weather Information...</p>
+      </div>
+
+      <div class="display-input" style="display: flex">
+        <form action="#">
+          <input type="text" name="CityName" id="CityName" placeholder="Enter the City name">
+        </form>
+
+        <!-- <button type="submit" id="Search">Search</button> -->
+
+        <p>--------- or ---------</p>
+
+        <button id="CurrLocation">Current Location</button>
+      </div>
+
+      <div class="infoItems" style="display: none">
+        <div class="maininfoItem">
+
+          <div id="currTitle">Current Weather</div>
+
+          <div id="icon"></div>
+
+          <div id="temp">
+            <span id="temp_icon">
+              <i class="fa-solid fa-temperature-full fa-2xl"></i>
+            </span>
+            <span id="temp_val">
+              <p>0<sup>o</sup>C</p>
+            </span>
+          </div>
+
+          <div id="weath">
+            <span>Null</span>
+          </div>
+
+          <div id="loc">
+            <span id="loc_icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span id="loc_name">Null</span>
+          </div>
+
+          <div id="oth">
+            <div id="feels">
+              <span id="feels_icon">
+                <i class="fa-solid fa-temperature-three-quarters fa-xl"></i>
+              </span>
+              <span id="feels_val">
+                <p>0<sup>o</sup>C</p>
+                <p>Feels like</p>
+              </span>
+            </div>
+
+            <div id="hum">
+              <span id="hum_icon"><i class="fa-solid fa-droplet fa-xl"></i></span>
+              <span id="hum_val">
+                <p>0</p>
+                <p>Humidity</p>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="otherinfoItems">
+          <div id="otherInfoTitle">5-Days Forecast</div>
+          <div class="otherinfoItem">
+            <div class="fore" id="fore1">
+              <div id="day"></div>
+              <div id="icon"></div>
+              <div id="temp"></div>
+              <div id="weath"></div>
+            </div>
+            <div class="fore" id="fore2">
+              <div id="day"></div>
+              <div id="icon"></div>
+              <div id="temp"></div>
+              <div id="weath"></div>
+            </div>
+            <div class="fore" id="fore3">
+              <div id="day"></div>
+              <div id="icon"></div>
+              <div id="temp"></div>
+              <div id="weath"></div>
+            </div>
+            <div class="fore" id="fore4">
+              <div id="day"></div>
+              <div id="icon"></div>
+              <div id="temp"></div>
+              <div id="weath"></div>
+            </div>
+            <div class="fore" id="fore5">
+              <div id="day"></div>
+              <div id="icon"></div>
+              <div id="temp"></div>
+              <div id="weath"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <h3>ContactUs</h3>
+      <p id="foot_contact_info" style="display: none;">: Swapnil@skylinksolutions.onmicrosoft.com</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
