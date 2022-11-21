@@ -17,34 +17,39 @@
       <h1>WeatherNow</h1>
     </div>
   </header>
+
   <section class="section">
 
+    <!-- Home Page Input Box -->
     <div class="display">
 
+      <!-- Weather Information Page Back to Home page button -->
       <div class="display-nav" style="display: none">
         <span id="backimg"><img src="img/back.svg" alt="backBtn"></span>
-
         <p id="nav">Search Another Location</p>
       </div>
 
+      <!-- Display status message for requested weather information -->
       <div class="display-msg" style="display: none">
         <p id="status">Fetching Weather Information...</p>
       </div>
 
+      <!-- Home page Input methods -->
       <div class="display-input" style="display: flex">
         <form action="#" style="display: inline-flex;">
           <input type="text" name="CityName" id="CityName" placeholder="Enter the City name">
           <span id="Search"><img src="img/search.svg" alt="searchBtn"></span>
         </form>
 
-        <!-- <button type="submit" id="Search">Search</button> -->
-
         <p>--------- or ---------</p>
 
         <button id="CurrLocation">Current Location</button>
       </div>
 
+      <!-- Weather information Box -->
       <div class="infoItems" style="display: none">
+
+        <!-- Current Weather information Box -->
         <div class="maininfoItem">
 
           <div id="currTitle">Current Weather</div>
@@ -91,6 +96,8 @@
           </div>
 
         </div>
+
+        <!-- 5-days weather forecast information box -->
         <div class="otherinfoItems">
           <div id="otherInfoTitle">5-Days Forecast</div>
           <div class="otherinfoItem">
@@ -127,15 +134,31 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- AboutUs info markup -->
+    <div class="display-AboutUs-items" style="display:none;">
+      <div class="AboutUsNav" style="display:flex;">
+        <span id="AboutUsBackimg"><img src="img/back.svg" alt="backBtn"></span>
+        <p>Back to Home</p>
+      </div>
+      <div class="AboutUsMsg">
+        <h3>A minor project by -</h3>
+        <ul>
+          <li>Swapnil</li>
+          <li>Mohit</li>
+          <li>Ashvini</li>
+          <li>Reetu</li>
+        </ul>
+        <h3>Contact Us at -</h3>
+        <div id="Email"><i>Swapnil@skylinksolutions.onmicrosoft.com</i></div>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="foot">
       <h3>ContactUs</h3>
-      <!-- <h3>ContactUs</h3> -->
-      <p id="foot_contact_info" style="display: none;">Swapnil@skylinksolutions.onmicrosoft.com</p>
     </div>
   </footer>
 

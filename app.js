@@ -17,16 +17,22 @@ const disMsg = document.querySelector('.display-msg');
 
 const infoBox = document.querySelector('.infoItems');
 
-const contactUs = document.querySelector('h3');
+const contactUs = document.querySelector('.foot h3');
+
+const contactUsBox = document.querySelector(".display-AboutUs-items");
+
+const contactUsNav = document.querySelector('.AboutUsNav');
 
 contactUs.addEventListener('click', () => {
-  const contactInfo = document.querySelector("#foot_contact_info");
-  if (contactInfo.style.display === "none") {
-    contactInfo.style = "display: flex;";
-  }
-  else {
-    contactInfo.style = "display: none;";
-  }
+  // const contactInfo = document.querySelector("#foot_contact_info");
+  // if (contactInfo.style.display === "none") {
+  //   contactInfo.style = "display: flex;";
+  // }
+  // else {
+  //   contactInfo.style = "display: none;";
+  // }
+
+  AddAboutUsInfo();
 })
 
 const APIKey = "a40340e404ef11982d3749f85d5203ed";
@@ -233,4 +239,19 @@ nav.addEventListener('click', () => {
   disMsg.style = "display: none";
   disInput.style = "display: flex";
   infoBox.style = "display: none";
+})
+
+
+const AddAboutUsInfo = () => {
+  disBox.classList.remove('display');
+  disInput.style = "display: none";
+  disMsg.style = "display: none";
+  contactUsBox.style = "display: flex";
+}
+
+contactUsNav.addEventListener('click', () => {
+  console.log("DSFDSAF")
+  disInput.style = "display: flex";
+  contactUsBox.style = "display: none";
+  disBox.classList.add('display');
 })
