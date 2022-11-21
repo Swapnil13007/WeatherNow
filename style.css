@@ -414,8 +414,8 @@ p.err {
 
 /* About us Section */
 .display-AboutUs-items {
-  height: 40vh;
-  width: 60vh;
+  height: 50%;
+  width: fit-content;
   padding: 0.3rem;
   border-radius: 0.3rem;
   background-color: #C4E4FF;
@@ -446,6 +446,7 @@ p.err {
   background-color: #284C6B;
   height: 86%;
   width: 100%;
+  padding: 0.4rem;
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
