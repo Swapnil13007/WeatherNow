@@ -244,13 +244,15 @@ nav.addEventListener('click', () => {
 
 const AddAboutUsInfo = () => {
   disBox.classList.remove('display');
+  disBox.classList.remove('info');
   disInput.style = "display: none";
   disMsg.style = "display: none";
+  nav.style = "display: none";
+  infoBox.style = "display: none";
   contactUsBox.style = "display: flex";
 }
 
 contactUsNav.addEventListener('click', () => {
-  console.log("DSFDSAF")
   disInput.style = "display: flex";
   contactUsBox.style = "display: none";
   disBox.classList.add('display');
