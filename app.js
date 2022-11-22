@@ -39,7 +39,6 @@ const options = {
 };
 
 const succ = (pos) => {
-  disMsg.style = "display: flex";
   const { latitude, longitude } = pos.coords;
   API = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKey}&units=metric`;
 
@@ -85,6 +84,10 @@ CityName.addEventListener('keydown', (evt) => {
 
 CurrBtn.addEventListener('click', () => {
   if (navigator.geolocation) {
+    pending = document.querySelector('#status');
+    pending.classList.remove('err');
+    pending.classList.add('suc');
+    disMsg.style = "display: flex";
     navigator.geolocation.getCurrentPosition(succ, err, options);
   }
   else {
