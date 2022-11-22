@@ -24,14 +24,6 @@ const contactUsBox = document.querySelector(".display-AboutUs-items");
 const contactUsNav = document.querySelector('.AboutUsNav');
 
 contactUs.addEventListener('click', () => {
-  // const contactInfo = document.querySelector("#foot_contact_info");
-  // if (contactInfo.style.display === "none") {
-  //   contactInfo.style = "display: flex;";
-  // }
-  // else {
-  //   contactInfo.style = "display: none;";
-  // }
-
   AddAboutUsInfo();
 })
 
@@ -42,11 +34,12 @@ let APIfore;
 
 const options = {
   enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 10000
+  timeout: 35000,
+  maximumAge: 30000
 };
 
 const succ = (pos) => {
+  disMsg.style = "display: flex";
   const { latitude, longitude } = pos.coords;
   API = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKey}&units=metric`;
 
@@ -64,8 +57,8 @@ function err(error) {
 }
 
 Search.addEventListener('click', (evt) => {
-  console.log(evt);
-  console.log(CityName.value);
+  // console.log(evt);
+  // console.log(CityName.value);
   if (CityName.value != null) {
     evt.preventDefault();
     city = CityName.value;
