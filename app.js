@@ -116,9 +116,13 @@ const getWeather = async () => {
 const addWeatherForecast = (foreData) => {
   const today = new Date();
   let data = today.getDate();
+  let month = today.getMonth();
+  let year = today.getFullYear();
+  let days_in_month = new Date(year, ++month, 0).getDate();
   let count = 1;
   // console.log(foreData);
   // console.log(foreData.list);
+
   for (const i of foreData.list) {
     let date = new Date(i.dt * 1000);
     let data2 = date.getDate();
@@ -139,7 +143,11 @@ const addWeatherForecast = (foreData) => {
 
       setForeIcon(i.weather[0].id, count);
 
-      data++;
+      if (data === days_in_month) {
+        data = 1;
+      } else {
+        data++;
+      }
       count++;
     }
   }
